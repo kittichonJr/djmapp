@@ -1,0 +1,48 @@
+/* table */
+.body-data-contain{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  .table-contain{
+    display: flex;
+  }
+  #table-data{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    height: 430px;
+    border: 1px solid #ddd;
+  }
+  #table-data tbody{
+    display: block;
+    max-height: 374.5px;
+    overflow-y: scroll;
+  }
+  #table-data thead, tbody tr{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  .table-contain table tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+  #table-data thead th{
+    text-align: left;
+    font-size: 20px;
+    padding: 1rem;
+    border-bottom: 1px solid #bbb;
+  }
+  #table-data td{
+    padding-left: 2rem;
+    font-size: 18px;
+  }
+  .table-button{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 15px;
+  }
+  .table-button input{
+    width: 12rem;
+    height: 2rem;
+  }

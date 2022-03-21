@@ -1,0 +1,13 @@
+  /* Nav */
+  .nav-bar{
+    display: flex;
+    border-bottom: 1px solid grey;
+  }
+  .nav-logo{
+    display: flex;
+  }
+  .nav-addactivity{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }

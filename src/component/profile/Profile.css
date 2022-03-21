@@ -1,0 +1,74 @@
+/* profile */
+#profile-nav{
+    display: flex;
+    margin: 0px;
+    width: 20%;
+    padding-top: 30px;
+    border-right: 1px solid grey;
+  }
+  .profile-contain{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .profile-pic-contain{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  .profile-circle-bg{
+    height: 150px;
+    width: 150px;
+    background-color: #bbb;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    display: inline-block
+  }
+  .profile-circle-bg img{
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  .profile-info{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+  }
+  .profile-info p{
+    margin: 0px;
+    font-size: 18px;
+  }
+  .profile-info label{
+    font-size: 18px;
+    padding-top: 5px;
+    color: grey;
+  }
+  .profile-footer{
+    display: flex;
+    justify-content: center;
+  }
+  .profile-footer a:link {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  .profile-footer  a:visited {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  .profile-footer a:hover {
+    color: pink;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  .profile-footer a:active {
+    color: orange;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
