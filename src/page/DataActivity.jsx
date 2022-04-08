@@ -1,164 +1,52 @@
 import Header from '../component/header/Header'
 import Profile from '../component/profile/Profile';
+import Tr from '../component/Tr/Tr'
 import './css/DataActivity.css'
+import {Link} from 'react-router-dom'
+import axios from 'axios'
+import {useState, useEffect} from 'react'
 
 const DataActivity = () => {
-    return (<>
-            <Header>Data Activity</Header>
-            <div class="body-container">
-                <Profile></Profile>
-                {/* <!-- body-table--> */}
-                <div class="body-data-contain">
-                    <div class="table-contain">
-                        <table id="table-data">
-                            <thead>
-                                <tr>
-                                    <th>Description</th>
-                                    <th>Activity Type</th>
-                                    <th>KiloCalories</th>
-                                    <th>Date</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ปั่นจักรยาน</td>
-                                    <td>300</td>
-                                    <td>December 10, 1815</td>
-                                </tr>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ว่ายน้ำ</td>
-                                    <td>400</td>
-                                    <td>December 9, 1906</td>
-                                </tr>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>วิ่ง</td>
-                                    <td>500</td>
-                                    <td>August 17, 1936</td>
-                                </tr>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>เดิน</td>
-                                    <td>600</td>
-                                    <td>June 24, 1917</td>
-                                </tr>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ปีนเขา</td>
-                                    <td>700</td>
-                                    <td>June 24, 1917</td>
-                                </tr>
-                                {/* <!-- Test --> */}
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ปีนเขา</td>
-                                    <td>700</td>
-                                    <td>June 24, 1917</td>
-                                </tr>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ปีนเขา</td>
-                                    <td>700</td>
-                                    <td>June 24, 1917</td>
-                                </tr>
-                                <tr>
+    const [data,setData] = useState([{}]);
+    useEffect(()=>{
+        (async ()=>{
+            const client = axios.create({
+                baseURL: 'http://localhost:7001',
+            })
+            const res = await client.get('/users/me/activitiesReccord')
+            setData(res.data)
+        })();
+    },[])
 
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ปีนเขา</td>
-                                    <td>700</td>
-                                    <td>June 24, 1917</td>
-                                </tr>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ปีนเขา</td>
-                                    <td>700</td>
-                                    <td>June 24, 1917</td>
-                                </tr>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ปีนเขา</td>
-                                    <td>700</td>
-                                    <td>June 24, 1917</td>
-                                </tr>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ปีนเขา</td>
-                                    <td>700</td>
-                                    <td>June 24, 1917</td>
-                                </tr>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ปีนเขา</td>
-                                    <td>700</td>
-                                    <td>June 24, 1917</td>
-                                </tr>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ปีนเขา</td>
-                                    <td>700</td>
-                                    <td>June 24, 1917</td>
-                                </tr>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ปีนเขา</td>
-                                    <td>700</td>
-                                    <td>June 24, 1917</td>
-                                </tr>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ปีนเขา</td>
-                                    <td>700</td>
-                                    <td>June 24, 1917</td>
-                                </tr>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ปีนเขา</td>
-                                    <td>700</td>
-                                    <td>June 24, 1917</td>
-                                </tr>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ปีนเขา</td>
-                                    <td>700</td>
-                                    <td>June 24, 1917</td>
-                                </tr>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ปีนเขา</td>
-                                    <td>700</td>
-                                    <td>June 24, 1917</td>
-                                </tr>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ปีนเขา</td>
-                                    <td>700</td>
-                                    <td>June 24, 1917</td>
-                                </tr>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ปีนเขา</td>
-                                    <td>700</td>
-                                    <td>June 24, 1917</td>
-                                </tr>
-                                <tr>
-                                    <td>ไม่รู้ ไม่รู้ ไม่รู้</td>
-                                    <td>ปีนเขา</td>
-                                    <td>700</td>
-                                    <td>June 24, 1917</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="table-button">
-                        <a href="add-activity.html">
-                            <input type="button" value="+ Add Activity" id="add-submit" />
-                        </a>
-                    </div>
+    return (<>
+        <Header>Data Activity</Header>
+        <div className="body-container">
+            <Profile></Profile>
+            {/* <!-- body-table--> */}
+            <div className="body-data-contain">
+                <div className="table-contain">
+                    <table id="table-data">
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th>Activity Type</th>
+                                <th>KiloCalories</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <Tr data={data} />
+                        </tbody>
+                    </table>
+                </div>
+                <div className="table-button">
+                    <Link to="/AddActivity">
+                        <input type="button" value="+ Add Activity" />
+                    </Link>
                 </div>
             </div>
-        </>
+        </div>
+    </>
     )
 };
 

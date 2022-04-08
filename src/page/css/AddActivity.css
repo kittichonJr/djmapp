@@ -1,0 +1,83 @@
+/* Body */
+.body-container{
+    display: flex;
+    justify-content: flex-start;
+  }
+  .body-label-input-contain{
+    display: flex;
+    width: 33%;
+    padding-top: 30px;
+    justify-content: flex-end;
+  }
+  .body-label{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .body-input-label{
+    display: flex;
+    padding-left: 20px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .body-input-label div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  .body-input-label label{
+    padding: 10px 10px;
+  } 
+  .body-input-label input{
+    width: 180px;
+    margin: 10px 0px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  .body-input-label select{
+    width: 180px;
+    margin: 10px 0px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  .body-button{
+    display: flex;
+    padding-top: 30px;
+    padding-left: 30px;
+    width: 20%;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
+  .save-button{
+    margin: 8px 0px;
+    width: 14rem;
+    height: 14rem;
+    font-size: 40px;
+  }
+  
+  input.error{
+      border-color: red;
+  }
+  input.error:focus{
+      outline: none;
+  }
+  select.error{
+    border-color: red;
+  }
+  select.error:focus{
+      outline: none;
+  }
+  p.error{
+      color: red;
+      margin: 0px;
+      position: absolute;
+      top:-5px;
+      left: 105px;
+      font-size: 10px;
+      letter-spacing: -0.5px;
+  }
+  
