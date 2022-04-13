@@ -1,0 +1,7 @@
+.config{
+    display: flex;
+    justify-content: space-between;
+}
+.config button{
+    margin-right: 5px;
+}

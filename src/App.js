@@ -7,7 +7,6 @@ import {
 import AddActivity from './page/AddActivity';
 import Navigator from './page/nevigatior'
 import DataActivity from './page/DataActivity';
-import TestModal from "./page/test-modal";
 
 const App = () => {  
   return (
@@ -16,8 +15,6 @@ const App = () => {
         <Route path="/" element={<Navigator />} />
         <Route path="AddActivity" element={<AddActivity  />} />
         <Route path="DataActivity" element={<DataActivity />} />
-        <Route path="TestModal" element={<TestModal />} />
-
       </Routes>
     </BrowserRouter>
   );

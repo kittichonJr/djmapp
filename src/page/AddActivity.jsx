@@ -3,25 +3,8 @@ import './css/AddActivity.css'
 import Header from '../component/header/Header'
 import Profile from '../component/profile/Profile';
 import axios from 'axios'
-import Modal from 'react-modal'
-
-// Modal
-const customStyles = {
-    content: {
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)',
-      },
-}
-// Modal.setAppElement('#addActivity-contain')
 
 function AddActivity() {
-
-
-
     const initialValue = {
         description:"",
         activity:"",
@@ -31,6 +14,7 @@ function AddActivity() {
     const [activity,setActivity] = useState(initialValue)
     const [error, setError] = useState({})
     const [isValid, setIsValid] = useState(false)
+
     const handleChange = ({target})=>{
         const {id, value}= target;
         setActivity({...activity,[id]:value})
@@ -113,6 +97,7 @@ function AddActivity() {
                 .catch(err => console.log(err))
             }
         })();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[isValid])
     return (<>
         <Header>Add Activity</Header>

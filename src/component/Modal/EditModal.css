@@ -1,0 +1,28 @@
+.form-input{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: content-box;
+    position: relative;
+}
+input.error{
+    border-color: red;
+}
+input.error:focus{
+    outline: none;
+}
+select.error{
+  border-color: red;
+}
+select.error:focus{
+    outline: none;
+}
+p.error{
+    color: red;
+    margin: 0px;
+    position: absolute;
+    top:-5px;
+    left: 105px;
+    font-size: 10px;
+    letter-spacing: -0.5px;
+}
