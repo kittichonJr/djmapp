@@ -3,6 +3,7 @@ import './css/AddActivity.css'
 import Header from '../component/header/Header'
 import Profile from '../component/profile/Profile';
 import axios from 'axios'
+import { Navigate} from "react-router";
 
 function AddActivity() {
     const initialValue = {
@@ -14,6 +15,7 @@ function AddActivity() {
     const [activity,setActivity] = useState(initialValue)
     const [error, setError] = useState({})
     const [isValid, setIsValid] = useState(false)
+    const [isRedirect, setIsRedirect] = useState(false)
 
     const handleChange = ({target})=>{
         const {id, value}= target;
@@ -89,8 +91,10 @@ function AddActivity() {
             if (isValid){
                 await client.post('/users/me/activitiesReccord',activity)
                 .then(res => {
-                    if (res.status === 200) {
+                    if (res.status === 201) {
+                        alert('Save Success')
                         console.log(res)
+                        setIsRedirect(true)
                         setIsValid(false)
                     }
                 })
@@ -100,6 +104,7 @@ function AddActivity() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[isValid])
     return (<>
+        {isRedirect && <Navigate to="/DataActivity" />}
         <Header>Add Activity</Header>
         <div className="body-container">
             <Profile></Profile>

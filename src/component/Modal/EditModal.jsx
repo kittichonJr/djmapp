@@ -79,8 +79,12 @@ function EditModal({ id, edit, onOff }) {
         if (isOkToUpdate){
           const res = await client.put(`/users/me/activitiesReccord/${id}`,updateData)
           console.log(res)
+          alert('Update Success')
+          closeModal()
+          window.location.reload();
         }
       })();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   },[isOkToUpdate])
 return (
   <div>

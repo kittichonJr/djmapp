@@ -31,6 +31,8 @@ const DataActivity = () => {
         })
         const res = await client.delete(`/users/me/activitiesReccord/${id}`)
         console.log(res)
+        alert('Delete Success')
+        window.location.reload();
     }
     return (<>
         <EditModal id={isEdit} edit={isEdit && true} onOff={onModalOff} />
