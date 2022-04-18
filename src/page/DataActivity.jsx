@@ -13,7 +13,7 @@ const DataActivity = () => {
     useEffect(()=>{
         (async ()=>{
             const client = axios.create({
-                baseURL: 'http://localhost:7001',
+                baseURL: 'https://express-for-dj-mapp.vercel.app/',
             })
             const res = await client.get('/users/me/activitiesReccord')
             setData(res.data)
@@ -27,7 +27,7 @@ const DataActivity = () => {
     }
     const onDelete = async (id)=>{
         const client = axios.create({
-            baseURL: 'http://localhost:7001',
+            baseURL: 'https://express-for-dj-mapp.vercel.app/',
         })
         const res = await client.delete(`/users/me/activitiesReccord/${id}`)
         console.log(res)

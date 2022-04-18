@@ -86,7 +86,7 @@ function AddActivity() {
     useEffect(()=>{
         (async ()=>{
             const client = axios.create({
-                baseURL: 'http://localhost:7001',
+                baseURL: 'https://express-for-dj-mapp.vercel.app/',
             })
             if (isValid){
                 await client.post('/users/me/activitiesReccord',activity)

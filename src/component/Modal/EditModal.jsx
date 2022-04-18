@@ -51,7 +51,7 @@ function EditModal({ id, edit, onOff }) {
   }
   const pullData = async () => {
     const client = axios.create({
-      baseURL: 'http://localhost:7001',
+      baseURL: 'https://express-for-dj-mapp.vercel.app/',
     })
     const res = await client.get(`/users/me/activitiesReccord/${id}`)
     setUpdateData(res.data)
@@ -74,7 +74,7 @@ function EditModal({ id, edit, onOff }) {
   }
   useEffect(()=>{
     (async ()=> {const client = axios.create({
-          baseURL: 'http://localhost:7001',
+          baseURL: 'https://express-for-dj-mapp.vercel.app/',
         })
         if (isOkToUpdate){
           const res = await client.put(`/users/me/activitiesReccord/${id}`,updateData)
